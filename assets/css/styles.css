@@ -1,0 +1,125 @@
+html{
+    scroll-behavior: smooth;
+}
+header{
+    background-color: black;
+}
+.navLink{
+    color:rgb(145, 181, 212)!important;
+}
+.homeSection,.eduSection,.skillSection,.projectSection{
+    background-color: black;
+    color: white;
+    /* height: 100vh;
+    width: 100%; */
+}
+/* .navContainer,.landingPage{
+    border: 1px solid red;
+} */
+
+.big-word{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 2.25em;
+    font-weight: bold;
+    color: rgb(14, 117, 214);
+}
+.eduContainer{
+    background-color: rgb(9, 2, 37);
+    padding: 10%;
+   border-radius: 100px 100px 30px 30px;
+}
+
+/* skill section */
+#be,#db,#tools{
+    display: none;
+}
+
+/* end skill section */
+
+/* project section */
+.pjContainer{
+    max-height: 100vh;
+    overflow-x: auto;
+    display: flex!important;
+}
+#project #others{
+  display: none;
+}
+.pjContainer::-webkit-scrollbar{
+    width: 0;
+}
+
+.pjCard{
+    border-radius: 33px;
+    background-color: rgb(10, 41, 59);
+}
+
+/* end project section */
+
+address{
+    margin-bottom: 0 !important;
+    color:white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Side nav section */
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    text-align: center;
+  }
+  
+  .sidenav a {
+    padding: 15px 15px 15px 15px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+  /*---- End Sidenav Section ----*/
+
+  /* to top arrow */
+  
+  .fixed {
+    position: fixed;
+    bottom: 10%;
+    right: 5%;
+    font-size: 3em;
+    display: none;
+    
+  }
+  .fixed a{
+    color: rgb(219, 216, 3);
+    font-size: 1.1em;
+  }
+
+  /* end to top arrow */
+
