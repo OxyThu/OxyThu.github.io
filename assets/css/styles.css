@@ -1,3 +1,6 @@
+*{
+  box-sizing: border-box;
+}
 html{
     scroll-behavior: smooth;
 }
@@ -17,41 +20,346 @@ header{
     border: 1px solid red;
 } */
 
-.big-word{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 2.25em;
-    font-weight: bold;
-    color: rgb(14, 117, 214);
-}
-.eduContainer{
-    background-color: rgb(9, 2, 37);
-    padding: 10%;
-   border-radius: 100px 100px 30px 30px;
+.social_icon{
+  width: 40px;
 }
 
-/* skill section */
-#be,#db,#tools{
-    display: none;
+.profile_photo{
+  width: 80%;
+  height: auto;
 }
+
+.sub_word{
+  font-family: 'tahoma', Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 1.5em;
+}
+.word {
+  margin: auto;
+  color: white;
+  height: 1em;
+  font: 700 normal 3em 'tahoma';
+  color: rgb(81, 154, 222);
+  margin-bottom: 0.5em;
+}
+
+
+@media screen and (max-width: 450px) {
+  .social_icon{
+    width: 27px;
+  }
+
+  .profile_photo{
+    width: 90%;
+    height: auto;
+  }
+
+  .word {
+    margin-bottom: 0;
+    font: 700 normal 2em 'tahoma';
+  }
+
+  .sub_word{
+    font-size: 1.1em;
+  }
+  
+}
+
+/* Education Section */
+
+.edu_title{
+  color: rgb(145, 181, 212);
+  font-weight: 700;
+  text-align: center;
+}
+
+.eduPhoto{
+  width: 100%;
+  height: auto;
+}
+
+.eduPhotoContainer{
+  width: 100%;
+  text-align: center;
+}
+
+.school_name{
+  font-size: 1.5em;
+  font-weight: bolder;
+}
+
+
+.eduContainer{
+  background-color: rgb(9, 2, 37);
+  padding: 10%;
+  border-radius: 100px 100px 30px 30px;
+}
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: rgba(186, 173, 173, 0.492);
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* Container around content */
+.edu_container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* The circles on the timeline */
+.edu_container::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: rgb(73, 77, 80);
+  border: 4px solid #ffffff;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the left */
+.edu_left {
+  left: 0;
+}
+
+/* Place the container to the right */
+.edu_right {
+  left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.edu_left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid rgba(61, 60, 60, 0.722);
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent rgba(61, 60, 60, 0.722);
+}
+
+/* Add arrows to the right container (pointing left) */
+.edu_right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid rgba(61, 60, 60, 0.722);
+  border-width: 10px 10px 10px 0;
+  border-color: transparent rgba(61, 60, 60, 0.722) transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.edu_right::after {
+  left: -16px;
+}
+
+/* The actual content */
+.edu_content {
+  padding: 20px 30px;
+  background-color: rgba(61, 60, 60, 0.722);
+  position: relative;
+  border-radius: 6px;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 450px) {
+
+  .edu_title{
+    font-weight: 700;
+    text-align: left;
+  }
+
+  .school_name{
+  font-size: 1em;
+}
+
+
+/* Place the timelime to the left */
+  .timeline::after {
+    left: 28px;
+  }
+
+/* Full-width containers */
+  .edu_container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+/* Make sure that all arrows are pointing leftwards */
+  .edu_container::before {
+    left: 60px;
+    border: medium solid rgba(61, 60, 60, 0.722);
+    border-width: 10px 10px 10px 0;
+    border-color: transparent rgba(61, 60, 60, 0.722) transparent transparent;
+  }
+
+/* Make sure all circles are at the same spot */
+  .edu_left::after, .edu_right::after {
+    left: 15px;
+  }
+
+/* Make all right containers behave like the left ones */
+  .edu_right {
+    left: 0%;
+  }
+}
+
+/* end Education Section */
+
+
+
+
+
+/* skill section */
+
+.skill_title{
+  color: rgb(145, 181, 212);
+  font-weight: 700;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.skill_container{
+  background-color: rgba(61, 60, 60, 0.722);
+  padding: 15px;
+  border-radius: 6px;
+  height: inherit!important;
+}
+
+.skill_text{
+  color: rgb(145, 181, 212);
+  align-items: center;
+  margin-top: 5px;
+}
+
+.skill_icon{
+  width: 25px;
+}
+
+.skill_progress_container{
+  background-color: black!important;
+  box-shadow: 1px 1px white;
+}
+
+.skill_progress{
+  background-color: rgb(145, 181, 212)!important;
+}
+
+.html{
+  background-color: rgb(178, 49, 29)!important;
+}
+
+.css{
+  background-color: rgb(23, 66, 165)!important;
+}
+
+.js{
+  background-color: rgb(238, 218, 6)!important;
+}
+
+.bootstrap{
+  background-color: rgb(79, 18, 164)!important;
+}
+
+.jquery{
+  background-color: rgb(15, 95, 160)!important;
+}
+
+.react{
+  background-color: rgb(6, 32, 179)!important;
+}
+
+.nodejs{
+  background-color: rgb(24, 103, 53)!important;
+}
+
+.dotnet{
+  background-color: rgb(82, 27, 150)!important;
+}
+
+.mysql{
+  background-color: rgb(19, 119, 181)!important;
+}
+
+.mongo{
+  background-color: rgb(5, 183, 73)!important;
+
+}
+
+.github{
+  background-color: rgb(207, 218, 211)!important;
+
+}
+
+.figma{
+  background-color: rgb(224, 68, 21)!important;
+
+}
+
+.selectSkillBtn {
+  font-size: 1.2em!important;
+  background-color: rgba(61, 60, 60, 0.718)!important;
+  color: rgb(145, 181, 212)!important;
+}
+
 
 /* end skill section */
 
 /* project section */
-.pjContainer{
-    max-height: 100vh;
-    overflow-x: auto;
-    display: flex!important;
-}
-#project #others{
-  display: none;
-}
+
 .pjContainer::-webkit-scrollbar{
     width: 0;
 }
 
+.pj_title, .pj_detail{
+  color:rgb(145, 181, 212)!important;
+}
+
+.pj_detail{
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.pj_icon{
+  width: 25px ;
+}
+
 .pjCard{
     border-radius: 33px;
-    background-color: rgb(10, 41, 59);
+    background-color: rgba(61, 60, 60, 0.722);
+}
+
+@media screen and (max-width: 450px) {
+  .pjContainer{
+    max-height: 100vh;
+    overflow-x: auto;
+    display: flex!important;
+}
 }
 
 /* end project section */
@@ -103,6 +411,10 @@ address{
   @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
+
+    .social_icon{
+      width: 20px;
+    }
   }
   /*---- End Sidenav Section ----*/
 
@@ -119,6 +431,11 @@ address{
   .fixed a{
     color: rgb(219, 216, 3);
     font-size: 1.1em;
+  }
+
+  footer{
+    background-color: rgb(51, 53, 54);
+    color : rgb(111, 109, 109);
   }
 
   /* end to top arrow */

@@ -6,6 +6,19 @@ $(document).ready(function(){
             toTopArrow();
        });
   });
+
+$("#skillChange").change((e) => {
+  let type = e.target.value;
+  changeSkill(type);
+})
+
+$("#projectChange").change((e) => {
+  let type = e.target.value;
+  changePj(type);
+})
+
+
+
     
 function openNav(){
     $("#mySidenav").css("width","60%");
@@ -34,44 +47,93 @@ function toTopArrow(){
    
 
 function changeSkill(skill){
-    let fe=document.querySelector("#fe");
-    let be=document.querySelector("#be");
-    let db=document.querySelector("#db");
-    let tls=document.querySelector("#tools");
+    let fe=$("#fe");
+    let be=$("#be");
+    let db=$("#db");
+    let tls=$("#others");
     switch(skill){
-        case 'fe': fe.style.display="block";
-                    be.style.display="none";
-                    db.style.display="none";
-                    tls.style.display="none";
+        case 'fe': fe.removeClass("d-none");
+                    be.addClass("d-none");
+                    db.addClass("d-none");
+                    tls.addClass("d-none");
                     break;
-        case 'be': fe.style.display="none";
-                    be.style.display="block";
-                    db.style.display="none";
-                    tls.style.display="none";
+        case 'be': fe.addClass("d-none");
+                    be.removeClass("d-none");
+                    db.addClass("d-none");
+                    tls.addClass("d-none");
                     break;
-        case 'db': fe.style.display="none";
-                    be.style.display="none";
-                    db.style.display="block"; 
-                    tls.style.display="none";
+        case 'db': fe.addClass("d-none");
+                    be.addClass("d-none");
+                    db.removeClass("d-none"); 
+                    tls.addClass("d-none");
                     break;
-        case 'tls': fe.style.display="none";
-                    be.style.display="none";
-                    db.style.display="none";
-                    tls.style.display="block";
+        case 'ots': fe.addClass("d-none");
+                    be.addClass("d-none");
+                    db.addClass("d-none");
+                    tls.removeClass("d-none");
                     break;
         default :break;
     }
 }
 
 function changePj(pj){
-    let webdev=document.querySelector("#WebDev");
-    let others=document.querySelector("#others");
+    let webdev=  $("#WebDev");
+    let others= $("#others_pj");
     switch(pj){
-        case 'webdev' : webdev.style.display="block";
-                        others.style.display="none"; break;
-        case 'others' : webdev.style.display="none";
-                        others.style.display="block"; break;
+        case 'webdev' : webdev.removeClass('d-none');
+                        others.addClass('d-none'); break;
+        case 'others_pj' : webdev.addClass('d-none'); 
+                        others.removeClass('d-none'); break;
         default:break;
 
     }
 }
+
+//Biography
+var words = ['I am Aung Si Thu', 'CS Student', ' Jr Backend Developer'],
+    part,
+    i = 0,
+    offset = 0,
+    len = words.length,
+    forwards = true,
+    skip_count = 0,
+    skip_delay = 15,
+    speed = 70;
+var wordflick = function () {
+  setInterval(function () {
+    if (forwards) {
+      if (offset >= words[i].length) {
+        ++skip_count;
+        if (skip_count == skip_delay) {
+          forwards = false;
+          skip_count = 0;
+        }
+      }
+    }
+    else {
+      if (offset == 0) {
+        forwards = true;
+        i++;
+        offset = 0;
+        if (i >= len) {
+          i = 0;
+        }
+      }
+    }
+    part = words[i].substr(0, offset);
+    if (skip_count == 0) {
+      if (forwards) {
+        offset++;
+      }
+      else {
+        offset--;
+      }
+    }
+    $('.word').text(part);
+  },speed);
+};
+
+$(document).ready(function () {
+  wordflick();
+});
+//end Biography
