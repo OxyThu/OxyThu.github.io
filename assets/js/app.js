@@ -1,11 +1,16 @@
 
 $(document).ready(function(){
-    console.log("hello");
-       $(document).scroll(function(){
-            closeNav();
-            toTopArrow();
-       });
+ 
+    $("#loading").fadeOut("slow");
+    $("#content").fadeIn("slow");
+
+  $(document).scroll(function(){
+    closeNav();
+    toTopArrow();
   });
+});
+
+
 
 $("#skillChange").change((e) => {
   let type = e.target.value;

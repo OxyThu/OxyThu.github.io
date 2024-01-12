@@ -11,317 +11,300 @@
     <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
     
     <style>
+       #loading {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #000000;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 9999;
+        }
         body{
             background-color: black;
             color: white;
         }
     </style>
 </head>
-<body>
+<body >
+  <div id="loading" class="">
+    <img src="./assets/images/waiting.gif" alt="Loading Spinner" width="200px" height="auto">
+  </div>
+  <div id="content">
     <div id="mySidenav" class="sidenav gy-4">
-        <a href="#" class="closebtn fs-3" onclick="closeNav()"><i class="fas fa-window-close "></i></a>
-        <a href="#home" onclick="closeNav()" class="" >Home</a>
-        <a href="#education" onclick="closeNav()" class="" >Education</a>
-        <a href="#skill" onclick="closeNav()" class="">Skills</a>
-        <a href="#project" onclick="closeNav()">Projects</a>
-        ‌<a href="https://oxythu.github.io/OxyThu" onclick="closeNav()" class="">Old Porfolio</a>
-    </div>
+      <a href="#" class="closebtn fs-3" onclick="closeNav()"><i class="fas fa-window-close "></i></a>
+      <a href="#home" onclick="closeNav()" class="" >Home</a>
+      <a href="#education" onclick="closeNav()" class="" >Education</a>
+      <a href="#skill" onclick="closeNav()" class="">Skills</a>
+      <a href="#project" onclick="closeNav()">Projects</a>
+      ‌<a href="https://oxythu.github.io/OxyThu" onclick="closeNav()" class="">Old Porfolio</a>
+  </div>
 
-    <header class="container-fluid header  ">
-        <nav class="navbar navbar-expand nav ">
-            <div class="collapse navbar-collapse " id="navbarNav">
-              <ul class="navbar-nav ms-3 fs-5 d-none d-md-flex">
-                <li class="nav-item mx-3">
-                  <a class="nav-link navLink" href="#home">Home </a>
-                </li>
-                <li class="nav-item mx-3">
-                  <a class="nav-link navLink" href="#education">Education</a>
-                </li>
-                <li class="nav-item mx-3">
-                  <a class="nav-link navLink" href="#skill">Skills</a>
-                </li>
-                <li class="nav-item mx-3">
-                  <a class="nav-link navLink " href="#project">Projects</a>
-                </li>
-              </ul>
-              <div class="navMenu d-block d-md-none ms-3">
-                  <a href="#" class="navLink fs-2" onclick="openNav()"> <i class="fas fa-bars"></i></a>
-              </div>
-            </div>
-            <div class="oxygenLogo justify-content-end px-2 px-md-4 py-1 me-md-3 me-1 py-md-3" href="#">
-                <img src="assets/images/oxygen.png" alt="Oxygen logo" height="50px" width="auto">
-              </div>
-          </nav>
-    </header>
-    
-        <!-- landing section -->
-        <section id="home" class="homeSection container-fluid ">
-            
-                <div class="row landingPage">
-                  <div class="col-1 mt-md-3 ms-md-3">
-                    <div class="socialLink d-flex flex-column ms-2 mt-5 py-3 justify-content-center align-item-center">
-                      <div class="col-2 col-md-1 mt-4">
-                          <a href="https://www.facebook.com/oxy.thu"><img src="./assets/images/facebook.svg" alt="facebook icon" class="social_icon"></a>
-                      </div>
-                      <div class="col-2 col-md-1  mt-4">
-                          <a href="https://www.instagram.com/oxy_thu/" ><img src="./assets/images/instagram.svg" alt="instagram icon" class="social_icon"></a>
-                      </div>
-                      <div class="col-2 col-md-1  mt-4">
-                          <a href="https://www.linkedin.com/in/aung-si-thu-ba4946210/" ><img src="./assets/images/linkedin.svg" alt="twitter icon" class="social_icon"></a>
-                      </div>
-                      <div class="col-2 col-md-1  mt-4  ">
-                          <a href="https://github.com/OxyThu" ><img src="./assets/images/github.svg" alt="github icon" class="social_icon"></a>
-                      </div> 
-                      </div>
-                   </div>
-                    <div class="col-11 col-md-4 my-5 mx-auto ps-md-1 ps-5  ">
-                            <img src="assets/images/my_profile.png" class= "mx-auto profile_photo" alt="Profile Photo" >
-                    </div>
-                    <div class="col-12 col-md-5 mt-md-5 mt-1 ">
-                        <p class="ms-2 mt-md-5  introPara py-1 py-md-3">
-                          <div class="ms-2 word"></div>
-                          <div class="sub_word ms-2 py-2">
-                          I love learning new things and<br>
-                           enjoy finding creative solutions, <br>
-                            especially those that help our environment <br> 
-                          </div>
-                          <div class="mt-3 ms-2">
-                            <a class="btn btn-outline-primary" href="assets/ast_cv.pdf">Download CV</a>
-                          </div>
-                          
-                        </p>
-                     
-                       </div>
-                  
-                   </div>
-                </div>
-                <div class="downArrow mt-5 text-center d-md-block d-none">
-                    <a href="#education" class="text-primary fs-2"><i class="fas fa-angle-double-down"></i></a>
-                </div>
-        </section>
-
-        <!-- education section -->
-        <section id="education" class="eduSection container-fluid py-5">
-          <h3 class="edu_title ms-4 ms-md-0 my-3 my-md-5">
-            | Education Background
-          </h3>
-          <div class="timeline">
-            <div class="edu_container edu_left">
-              <div class="edu_content">
-                <div class="eduPhotoContainer mx-auto  my-3">
-                  <img src="/assets/images/uni_photo.jpg" alt="education Photo" class="eduPhoto" >
-              </div>
-                <p class="school_name">University Of Computer Studies Sittway</p>
-              <ul class="list-group ms-md-4 ms-2">
-                <li>Computer Science</li>
-                <li>2017 - Present</li>
-              </ul>
-              </div>
-            </div>
-            <div class="edu_container edu_right">
-              <div class="edu_content">
-                <div class="eduPhotoContainer mx-auto  my-3">
-                  <img src="/assets/images/state_logo.jpg" alt="education Photo" class="eduPhoto" >
-              </div>
-                <p class="school_name">B.E.H.S (10) Tamwe - Yangon</p>
-              <ul class="list-group ms-md-4 ms-2">
-                <li>2010 - 2017</li>
-              </ul>
-              </div>
+  <header class="container-fluid header  ">
+      <nav class="navbar navbar-expand nav ">
+          <div class="collapse navbar-collapse " id="navbarNav">
+            <ul class="navbar-nav ms-3 fs-5 d-none d-md-flex">
+              <li class="nav-item mx-3">
+                <a class="nav-link navLink" href="#home">Home </a>
+              </li>
+              <li class="nav-item mx-3">
+                <a class="nav-link navLink" href="#education">Education</a>
+              </li>
+              <li class="nav-item mx-3">
+                <a class="nav-link navLink" href="#skill">Skills</a>
+              </li>
+              <li class="nav-item mx-3">
+                <a class="nav-link navLink " href="#project">Projects</a>
+              </li>
+            </ul>
+            <div class="navMenu d-block d-md-none ms-3">
+                <a href="#" class="navLink fs-2" onclick="openNav()"> <i class="fas fa-bars"></i></a>
             </div>
           </div>
-      </section>
-        <!-- skill section  -->
-        <section id="skill" class="skillSection container-fluid pb-3 pt-5">
+          <div class="oxygenLogo justify-content-end px-2 px-md-4 py-1 me-md-3 me-1 py-md-3" href="#">
+              <img src="assets/images/oxygen.png" alt="Oxygen logo" height="50px" width="auto">
+            </div>
+        </nav>
+  </header>
+  
+      <!-- landing section -->
+      <section id="home" class="homeSection container-fluid ">
           
-              <div class="d-flex justify-content-between">
-                <div class="col-4">
-                  <h3 class="skill_title ms-2 ms-md-5 ">
-                    | Skills
-                 </h3>
-                </div>
-                <div class="col-7 col-md-3 me-md-5 me-3">
-                  <select class="form-select selectSkillBtn" aria-label="Default select example" id="skillChange">
-                    <option value="fe" selected>Frontend</option>
-                    <option value="be">Backend</option>
-                    <option value="db">Database</option>
-                    <option value="ots">Others</option>
-                  </select>
-                </div>
+              <div class="row landingPage">
+                <div class="col-1 mt-md-3 ms-md-3">
+                  <div class="socialLink d-flex flex-column ms-2 mt-5 py-3 justify-content-center align-item-center">
+                    <div class="col-2 col-md-1 mt-4">
+                        <a href="https://www.facebook.com/oxy.thu"><img src="./assets/images/facebook.svg" alt="facebook icon" class="social_icon"></a>
+                    </div>
+                    <div class="col-2 col-md-1  mt-4">
+                        <a href="https://www.instagram.com/oxy_thu/" ><img src="./assets/images/instagram.svg" alt="instagram icon" class="social_icon"></a>
+                    </div>
+                    <div class="col-2 col-md-1  mt-4">
+                        <a href="https://www.linkedin.com/in/aung-si-thu-ba4946210/" ><img src="./assets/images/linkedin.svg" alt="twitter icon" class="social_icon"></a>
+                    </div>
+                    <div class="col-2 col-md-1  mt-4  ">
+                        <a href="https://github.com/OxyThu" ><img src="./assets/images/github.svg" alt="github icon" class="social_icon"></a>
+                    </div> 
+                    </div>
+                 </div>
+                  <div class="col-11 col-md-4 my-5 mx-auto ps-md-1 ps-5  ">
+                          <img src="assets/images/my_profile.png" class= "mx-auto profile_photo" alt="Profile Photo" >
+                  </div>
+                  <div class="col-12 col-md-5 mt-md-5 mt-1 ">
+                      <p class="ms-2 mt-md-5  introPara py-1 py-md-3">
+                        <div class="ms-2 word"></div>
+                        <div class="sub_word ms-2 py-2">
+                        I love learning new things and<br>
+                         enjoy finding creative solutions, <br>
+                          especially those that help our environment <br> 
+                        </div>
+                        <div class="mt-3 ms-2">
+                          <a class="btn btn-outline-primary" href="assets/ast_cv.pdf">Download CV</a>
+                        </div>
+                        
+                      </p>
+                   
+                     </div>
+                
+                 </div>
               </div>
-            
+              <div class="downArrow mt-5 text-center d-md-block d-none">
+                  <a href="#education" class="text-primary fs-2"><i class="fas fa-angle-double-down"></i></a>
+              </div>
+      </section>
 
-              <div class="row justify-content-center pb-4">
-                <div class="col-md-4 d-none d-md-block py-3 my-5 mx-auto">
-                  <img src="assets/images/skill.png" alt="Skill Photo" width="100%" height="auto">
+      <!-- education section -->
+      <section id="education" class="eduSection container-fluid py-5">
+        <h3 class="edu_title ms-4 ms-md-0 my-3 my-md-5">
+          | Education Background
+        </h3>
+        <div class="timeline">
+          <div class="edu_container edu_left">
+            <div class="edu_content">
+              <div class="eduPhotoContainer mx-auto  my-3">
+                <img src="/assets/images/uni_photo.jpg" alt="education Photo" class="eduPhoto" >
+            </div>
+              <p class="school_name">University Of Computer Studies Sittway</p>
+            <ul class="list-group ms-md-4 ms-2">
+              <li>Computer Science</li>
+              <li>2017 - Present</li>
+            </ul>
+            </div>
+          </div>
+          <div class="edu_container edu_right">
+            <div class="edu_content">
+              <div class="eduPhotoContainer mx-auto  my-3">
+                <img src="/assets/images/state_logo.jpg" alt="education Photo" class="eduPhoto" >
+            </div>
+              <p class="school_name">B.E.H.S (10) Tamwe - Yangon</p>
+            <ul class="list-group ms-md-4 ms-2">
+              <li>2010 - 2017</li>
+            </ul>
+            </div>
+          </div>
+        </div>
+    </section>
+      <!-- skill section  -->
+      <section id="skill" class="skillSection container-fluid pb-3 pt-5">
+        
+            <div class="d-flex justify-content-between">
+              <div class="col-4">
+                <h3 class="skill_title ms-2 ms-md-5 ">
+                  | Skills
+               </h3>
               </div>
-                <div class="col-12 col-md-7 py-3 mx-auto my-5 row justify-content-center" id="fe">
-                  <div class="col-lg-6">
-                    <div class=" skill_container   mb-3">
-                      <div class="d-flex justify-content-between">
-                        <h5 class="skill_text">HTML</h5>
-                        <div>
-                          <img src="./assets/icons/html.svg" alt="" class="skill_icon">
-                        </div>
-                      </div>
-                      <div class="progress skill_progress_container my-2">
-                          <div class="progress-bar progress-bar-striped active skill_progress html" role="progressbar" style="width: 85%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                  </div>
-                   <div class="col-lg-6">
-                    <div class="skill_container   mb-3">
-                      <div class="d-flex justify-content-between">
-                        <h5 class="skill_text">CSS</h5>
-                        <div>
-                          <img src="./assets/icons/css.svg" alt="" class="skill_icon">
-                        </div>
-                      </div>
-                      <div class="progress skill_progress_container my-2">
-                          <div class="progress-bar progress-bar-striped active skill_progress css" role="progressbar" style="width: 80%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                   </div>
-                   <div class="col-lg-6">
-                    <div class=" skill_container  mb-3">
-                      <div class="d-flex justify-content-between">
-                        <h5 class="skill_text">JAVASCRIPT</h5>
-                        <div>
-                          <img src="./assets/icons/javascript.svg" alt="" class="skill_icon">
-                        </div>
-                      </div>
-                      <div class="progress skill_progress_container my-2">
-                          <div class="progress-bar progress-bar-striped active  skill_progress js" role="progressbar" style="width: 88%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                   </div>
-                   <div class="col-lg-6">
-                    <div class=" skill_container  mb-3">
-                      <div class="d-flex justify-content-between">
-                        <h5 class="skill_text">BOOTSTRAP</h5>
-                        <div>
-                          <img src="./assets/icons/bootstrap.svg" alt="" class="skill_icon">
-                        </div>
-                      </div>
-                      <div class="progress skill_progress_container my-2">
-                          <div class="progress-bar progress-bar-striped active skill_progress bootstrap" role="progressbar" style="width: 75%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                   </div>
-                   <div class="col-lg-6">
-                    <div class=" skill_container  mb-3">
-                      <div class="d-flex justify-content-between">
-                        <h5 class="skill_text">JQUERY</h5>
-                        <div>
-                          <img src="./assets/icons/jquery.svg" alt="" class="skill_icon">
-                        </div>
-                      </div>
-                      <div class="progress skill_progress_container my-2">
-                          <div class="progress-bar progress-bar-striped active skill_progress jquery" role="progressbar" style="width: 78%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                   </div>
-                   <div class="col-lg-6">
-                    <div class=" skill_container   mb-3">
-                      <div class="d-flex justify-content-between">
-                        <h5 class="skill_text">REACT</h5>
-                        <div>
-                          <img src="./assets/icons/react.svg" alt="" class="skill_icon">
-                        </div>
-                      </div>
-                      <div class="progress skill_progress_container my-2">
-                          <div class="progress-bar progress-bar-striped active skill_progress react " role="progressbar" style="width: 55%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                   </div>
-                </div>
-            
-                <div class="col-12 col-md-7 py-3 mx-auto my-5 row justify-content-center d-none" id="be">
-                  <div class="col-lg-6">
-                    <div class="skill_container  mb-3">
-                      <div class="d-flex justify-content-between">
-                        <h5 class="skill_text">NodeJS</h5>
-                        <div>
-                          <img src="./assets/icons/nodejs.svg" alt="" class="skill_icon">
-                        </div>
-                      </div>
-                      <div class="progress skill_progress_container my-2">
-                          <div class="progress-bar progress-bar-striped active skill_progress nodejs" role="progressbar" style="width: 80%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                  </div>
-                   <div class="col-lg-6">
-                    <div class="skill_container  mb-3">
-                      <div class="d-flex justify-content-between">
-                        <h5 class="skill_text">ASP.NET</h5>
-                        <div>
-                          <img src="./assets/icons/dotnet.svg" alt="" class="skill_icon">
-                        </div>
-                      </div>
-                      <div class="progress skill_progress_container my-2">
-                          <div class="progress-bar progress-bar-striped active skill_progress dotnet" role="progressbar" style="width: 50%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                  </div>
+              <div class="col-7 col-md-3 me-md-5 me-3">
+                <select class="form-select selectSkillBtn" aria-label="Default select example" id="skillChange">
+                  <option value="fe" selected>Frontend</option>
+                  <option value="be">Backend</option>
+                  <option value="db">Database</option>
+                  <option value="ots">Others</option>
+                </select>
               </div>
+            </div>
+          
 
-              <div class="col-12 col-md-7 py-3 mx-auto my-5 row justify-content-center d-none" id="db">
+            <div class="row justify-content-center pb-4">
+              <div class="col-md-4 d-none d-md-block py-3 my-5 mx-auto">
+                <img src="assets/images/skill.png" alt="Skill Photo" width="100%" height="auto">
+            </div>
+              <div class="col-12 col-md-7 py-3 mx-auto my-5 row justify-content-center" id="fe">
                 <div class="col-lg-6">
-                  <div class="skill_container  mb-3">
+                  <div class=" skill_container   mb-3">
                     <div class="d-flex justify-content-between">
-                      <h5 class="skill_text">MySQL</h5>
+                      <h5 class="skill_text">HTML</h5>
                       <div>
-                        <img src="./assets/icons/mysql.svg" alt="" class="skill_icon">
+                        <img src="./assets/icons/html.svg" alt="" class="skill_icon">
                       </div>
                     </div>
                     <div class="progress skill_progress_container my-2">
-                        <div class="progress-bar progress-bar-striped active skill_progress mysql" role="progressbar" style="width: 90%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                        <div class="progress-bar progress-bar-striped active skill_progress html" role="progressbar" style="width: 85%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                       </div>
                   </div>
                 </div>
                  <div class="col-lg-6">
-                  <div class="skill_container mb-3">
+                  <div class="skill_container   mb-3">
                     <div class="d-flex justify-content-between">
-                      <h5 class="skill_text">Mongo</h5>
+                      <h5 class="skill_text">CSS</h5>
                       <div>
-                        <img src="./assets/icons/mongo.svg" alt="" class="skill_icon">
+                        <img src="./assets/icons/css.svg" alt="" class="skill_icon">
                       </div>
                     </div>
                     <div class="progress skill_progress_container my-2">
-                        <div class="progress-bar progress-bar-striped active skill_progress mongo" role="progressbar" style="width: 45%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                        <div class="progress-bar progress-bar-striped active skill_progress css" role="progressbar" style="width: 80%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                  </div>
+                 </div>
+                 <div class="col-lg-6">
+                  <div class=" skill_container  mb-3">
+                    <div class="d-flex justify-content-between">
+                      <h5 class="skill_text">JAVASCRIPT</h5>
+                      <div>
+                        <img src="./assets/icons/javascript.svg" alt="" class="skill_icon">
+                      </div>
+                    </div>
+                    <div class="progress skill_progress_container my-2">
+                        <div class="progress-bar progress-bar-striped active  skill_progress js" role="progressbar" style="width: 88%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                  </div>
+                 </div>
+                 <div class="col-lg-6">
+                  <div class=" skill_container  mb-3">
+                    <div class="d-flex justify-content-between">
+                      <h5 class="skill_text">BOOTSTRAP</h5>
+                      <div>
+                        <img src="./assets/icons/bootstrap.svg" alt="" class="skill_icon">
+                      </div>
+                    </div>
+                    <div class="progress skill_progress_container my-2">
+                        <div class="progress-bar progress-bar-striped active skill_progress bootstrap" role="progressbar" style="width: 75%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                  </div>
+                 </div>
+                 <div class="col-lg-6">
+                  <div class=" skill_container  mb-3">
+                    <div class="d-flex justify-content-between">
+                      <h5 class="skill_text">JQUERY</h5>
+                      <div>
+                        <img src="./assets/icons/jquery.svg" alt="" class="skill_icon">
+                      </div>
+                    </div>
+                    <div class="progress skill_progress_container my-2">
+                        <div class="progress-bar progress-bar-striped active skill_progress jquery" role="progressbar" style="width: 78%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                  </div>
+                 </div>
+                 <div class="col-lg-6">
+                  <div class=" skill_container   mb-3">
+                    <div class="d-flex justify-content-between">
+                      <h5 class="skill_text">REACT</h5>
+                      <div>
+                        <img src="./assets/icons/react.svg" alt="" class="skill_icon">
+                      </div>
+                    </div>
+                    <div class="progress skill_progress_container my-2">
+                        <div class="progress-bar progress-bar-striped active skill_progress react " role="progressbar" style="width: 55%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                  </div>
+                 </div>
+              </div>
+          
+              <div class="col-12 col-md-7 py-3 mx-auto my-5 row justify-content-center d-none" id="be">
+                <div class="col-lg-6">
+                  <div class="skill_container  mb-3">
+                    <div class="d-flex justify-content-between">
+                      <h5 class="skill_text">NodeJS</h5>
+                      <div>
+                        <img src="./assets/icons/nodejs.svg" alt="" class="skill_icon">
+                      </div>
+                    </div>
+                    <div class="progress skill_progress_container my-2">
+                        <div class="progress-bar progress-bar-striped active skill_progress nodejs" role="progressbar" style="width: 80%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                       </div>
                   </div>
                 </div>
-               
-           
-               
-                
+                 <div class="col-lg-6">
+                  <div class="skill_container  mb-3">
+                    <div class="d-flex justify-content-between">
+                      <h5 class="skill_text">ASP.NET</h5>
+                      <div>
+                        <img src="./assets/icons/dotnet.svg" alt="" class="skill_icon">
+                      </div>
+                    </div>
+                    <div class="progress skill_progress_container my-2">
+                        <div class="progress-bar progress-bar-striped active skill_progress dotnet" role="progressbar" style="width: 50%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                  </div>
+                </div>
             </div>
 
-            <div class="col-12 col-md-7 py-3 mx-auto my-5 row justify-content-center d-none" id="others">
+            <div class="col-12 col-md-7 py-3 mx-auto my-5 row justify-content-center d-none" id="db">
               <div class="col-lg-6">
-                <div class="skill_container mb-3">
+                <div class="skill_container  mb-3">
                   <div class="d-flex justify-content-between">
-                    <h5 class="skill_text">Github</h5>
+                    <h5 class="skill_text">MySQL</h5>
                     <div>
-                      <img src="./assets/icons/github.svg" alt="" class="skill_icon">
+                      <img src="./assets/icons/mysql.svg" alt="" class="skill_icon">
                     </div>
                   </div>
                   <div class="progress skill_progress_container my-2">
-                      <div class="progress-bar progress-bar-striped active skill_progress github" role="progressbar" style="width: 88%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                      <div class="progress-bar progress-bar-striped active skill_progress mysql" role="progressbar" style="width: 90%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                 </div>
               </div>
                <div class="col-lg-6">
-                <div class="skill_container  mb-3">
+                <div class="skill_container mb-3">
                   <div class="d-flex justify-content-between">
-                    <h5 class="skill_text">Figma</h5>
+                    <h5 class="skill_text">Mongo</h5>
                     <div>
-                      <img src="./assets/icons/figma.svg" alt="" class="skill_icon">
+                      <img src="./assets/icons/mongo.svg" alt="" class="skill_icon">
                     </div>
                   </div>
                   <div class="progress skill_progress_container my-2">
-                      <div class="progress-bar progress-bar-striped active skill_progress figma" role="progressbar" style="width: 90%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                      <div class="progress-bar progress-bar-striped active skill_progress mongo" role="progressbar" style="width: 45%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                 </div>
               </div>
@@ -330,59 +313,70 @@
              
               
           </div>
-               
-               
-              </div>
-        </section>
 
-        
-
-        <!-- project section -->
-        <section id="project" class="projectSection container-fluid pb-3">
-         
-              <div class="d-flex justify-content-between pb-5 pt-lg-5">
-                <div class="col-4">
-                  <h3 class="skill_title ms-2 ms-md-5 ">
-                    | Projects
-                 </h3>
+          <div class="col-12 col-md-7 py-3 mx-auto my-5 row justify-content-center d-none" id="others">
+            <div class="col-lg-6">
+              <div class="skill_container mb-3">
+                <div class="d-flex justify-content-between">
+                  <h5 class="skill_text">Github</h5>
+                  <div>
+                    <img src="./assets/icons/github.svg" alt="" class="skill_icon">
+                  </div>
                 </div>
-                <div class="col-6 col-md-3 me-md-5 me-3">
-                  <select class="form-select selectSkillBtn" aria-label="Default select example" id="projectChange">
-                    <option value="webdev" selected>Web Dev</option>
-                    <option value="others_pj">Others</option>
-                
-                  </select>
-                </div>
+                <div class="progress skill_progress_container my-2">
+                    <div class="progress-bar progress-bar-striped active skill_progress github" role="progressbar" style="width: 88%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
               </div>
-              <div  id="WebDev" >
-                <div class="pb-5 pt-1 pt-md-3 pjContainer  justify-content-start justify-content-md-center d-flex ">
-                  <div class="pjCard col-11 col-md-3 px-3 py-3 mb-3 mx-3 ">
-                    <h5 class="text-center pj_title">Fresh Water Supply Platform</h5>
-                    <hr>
-                    <div class="pjImg">
-                        <img src="/assets/images/fwsp.jpg" alt="Fwsp Photo" width="100%" height="auto">
-                    </div>
-                    <hr class="text-center">
-                    <div class="pjDetail row">
-                      <div>
-                         <img src="./assets/icons/html.svg" alt="html icon" class="pj_icon"> |
-                         <img src="./assets/icons/css.svg" alt="html icon" class="pj_icon"> |
-                         <img src="./assets/icons/bootstrap.svg" alt="html icon" class="pj_icon"> |
-                         <img src="./assets/icons/javascript.svg" alt="html icon" class="pj_icon"> |
-                         <img src="./assets/icons/jquery.svg" alt="html icon" class="pj_icon"> |
-                         <img src="./assets/icons/nodejs.svg" alt="html icon" class="pj_icon"> |
-                         <img src="./assets/icons/mysql.svg" alt="html icon" class="pj_icon"> |
-                         <img src="./assets/icons/github.svg" alt="html icon" class="pj_icon"> |
-                         <img src="./assets/icons/figma.svg" alt="html icon" class="pj_icon"> 
-                      </div>
-                      
-                   </div>
+            </div>
+             <div class="col-lg-6">
+              <div class="skill_container  mb-3">
+                <div class="d-flex justify-content-between">
+                  <h5 class="skill_text">Figma</h5>
+                  <div>
+                    <img src="./assets/icons/figma.svg" alt="" class="skill_icon">
+                  </div>
                 </div>
+                <div class="progress skill_progress_container my-2">
+                    <div class="progress-bar progress-bar-striped active skill_progress figma" role="progressbar" style="width: 90%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+              </div>
+            </div>
+           
+       
+           
+            
+        </div>
+             
+             
+            </div>
+      </section>
+
+      
+
+      <!-- project section -->
+      <section id="project" class="projectSection container-fluid pb-3">
+       
+            <div class="d-flex justify-content-between pb-5 pt-lg-5">
+              <div class="col-4">
+                <h3 class="skill_title ms-2 ms-md-5 ">
+                  | Projects
+               </h3>
+              </div>
+              <div class="col-6 col-md-3 me-md-5 me-3">
+                <select class="form-select selectSkillBtn" aria-label="Default select example" id="projectChange">
+                  <option value="webdev" selected>Web Dev</option>
+                  <option value="others_pj">Others</option>
+              
+                </select>
+              </div>
+            </div>
+            <div  id="WebDev" >
+              <div class="pb-5 pt-1 pt-md-3 pjContainer  justify-content-start justify-content-md-center d-flex ">
                 <div class="pjCard col-11 col-md-3 px-3 py-3 mb-3 mx-3 ">
-                  <h5 class="text-center pj_title">Class EC Management System</h5>
+                  <h5 class="text-center pj_title">Fresh Water Supply Platform</h5>
                   <hr>
                   <div class="pjImg">
-                      <img src="/assets/images/ecms.jpg" alt="Emcs Photo" width="100%" height="auto">
+                      <img src="/assets/images/fwsp.jpg" alt="Fwsp Photo" width="100%" height="auto">
                   </div>
                   <hr class="text-center">
                   <div class="pjDetail row">
@@ -392,7 +386,7 @@
                        <img src="./assets/icons/bootstrap.svg" alt="html icon" class="pj_icon"> |
                        <img src="./assets/icons/javascript.svg" alt="html icon" class="pj_icon"> |
                        <img src="./assets/icons/jquery.svg" alt="html icon" class="pj_icon"> |
-                       <img src="./assets/icons/dotnet.svg" alt="html icon" class="pj_icon"> |
+                       <img src="./assets/icons/nodejs.svg" alt="html icon" class="pj_icon"> |
                        <img src="./assets/icons/mysql.svg" alt="html icon" class="pj_icon"> |
                        <img src="./assets/icons/github.svg" alt="html icon" class="pj_icon"> |
                        <img src="./assets/icons/figma.svg" alt="html icon" class="pj_icon"> 
@@ -400,91 +394,115 @@
                     
                  </div>
               </div>
-                    <div class="pjCard col-11 col-md-3 px-3 py-3 mb-3 mx-3 ">
-                         <h5 class="text-center pj_title">Bus Ticket Booking</h5>
-                         <hr>
-                         <div class="pjImg">
-                             <img src="/assets/images/bus-ticket.png" alt="HTML Documentation" width="100%" height="auto">
-                         </div>
-                         <hr class="text-center">
-                         <div class="pjDetail row">
-                           <div>
-                              <img src="./assets/icons/html.svg" alt="html icon" class="pj_icon"> |
-                              <img src="./assets/icons/css.svg" alt="html icon" class="pj_icon"> |
-                              <img src="./assets/icons/javascript.svg" alt="html icon" class="pj_icon"> |
-                              <img src="./assets/icons/java.svg" alt="html icon" class="pj_icon"> |
-                              <img src="./assets/icons/mysql.svg" alt="html icon" class="pj_icon"> 
-                           </div>
-                           
-                        </div>
-                     </div>
-                   
+              <div class="pjCard col-11 col-md-3 px-3 py-3 mb-3 mx-3 ">
+                <h5 class="text-center pj_title">Class EC Management System</h5>
+                <hr>
+                <div class="pjImg">
+                    <img src="/assets/images/ecms.jpg" alt="Emcs Photo" width="100%" height="auto">
                 </div>
-              </div>
-              <div id="others_pj" class="d-none">
-                <div  id="others" class="pb-5 pt-1 pt-md-3 pjContainer justify-content-start justify-content-md-center d-flex" >
-                    <div class="pjCard col-11 col-md-3 px-3 py-3 mb-3 mx-3 ">
-                        <h4 class="text-center pj_detail">Myanmar Roboleague 2019</h4>
-                        <h6 class="text-center pj_detail">Competition Robot</h6>
-                         <hr  class="text-center">
-                        <div class="pjImg">
-                            <img src="assets/images/grab.png" alt="HTML Documentation" width="100%" height="auto">
-                        </div>
-                         <hr>
-                        <div class="pjDetail">
-                            <h5 class="mb-3 pj_title"> Grab Robot</h5>
-                            <ul class="list-group">
-                                <li class="list-group-item"><i class="fab fa-uncharted"></i> MBlock Softwate</li>
-                                <li class="list-group-item"><i class="fas fa-robot"></i> Utimate 2.0</li>
-                              </ul>
-                        </div>
-                    </div>
-                    <div class="pjCard col-11 col-md-3 px-3 py-3 mb-3 mx-3 ">
-                        <h4 class="text-center pj_detail">Myanmar Robotian 2019</h4>
-                        <h6 class="text-center pj_detail">Accessement Robot</h5>
-                         <hr>
-                         <div class="pjImg">
-                             <img src="/assets/images/line.png" alt="HTML Documentation" width="100%" height="auto">
+                <hr class="text-center">
+                <div class="pjDetail row">
+                  <div>
+                     <img src="./assets/icons/html.svg" alt="html icon" class="pj_icon"> |
+                     <img src="./assets/icons/css.svg" alt="html icon" class="pj_icon"> |
+                     <img src="./assets/icons/bootstrap.svg" alt="html icon" class="pj_icon"> |
+                     <img src="./assets/icons/javascript.svg" alt="html icon" class="pj_icon"> |
+                     <img src="./assets/icons/jquery.svg" alt="html icon" class="pj_icon"> |
+                     <img src="./assets/icons/dotnet.svg" alt="html icon" class="pj_icon"> |
+                     <img src="./assets/icons/mysql.svg" alt="html icon" class="pj_icon"> |
+                     <img src="./assets/icons/github.svg" alt="html icon" class="pj_icon"> |
+                     <img src="./assets/icons/figma.svg" alt="html icon" class="pj_icon"> 
+                  </div>
+                  
+               </div>
+            </div>
+                  <div class="pjCard col-11 col-md-3 px-3 py-3 mb-3 mx-3 ">
+                       <h5 class="text-center pj_title">Bus Ticket Booking</h5>
+                       <hr>
+                       <div class="pjImg">
+                           <img src="/assets/images/bus-ticket.png" alt="HTML Documentation" width="100%" height="auto">
+                       </div>
+                       <hr class="text-center">
+                       <div class="pjDetail row">
+                         <div>
+                            <img src="./assets/icons/html.svg" alt="html icon" class="pj_icon"> |
+                            <img src="./assets/icons/css.svg" alt="html icon" class="pj_icon"> |
+                            <img src="./assets/icons/javascript.svg" alt="html icon" class="pj_icon"> |
+                            <img src="./assets/icons/java.svg" alt="html icon" class="pj_icon"> |
+                            <img src="./assets/icons/mysql.svg" alt="html icon" class="pj_icon"> 
                          </div>
-                         <hr class="text-center">
-                         <div class="pjDetail">
-                            <h5 class="mb-3 pj_title"> Line Tracking Robot</h5>
-                            <ul class="list-group">
-                                <li class="list-group-item "><i class="fas fa-robot"></i> Arduino</li>
-                                <li class="list-group-item"><i class="fas fa-robot"></i> Sensors</li>
-                              </ul>
-                        </div>
-                     </div>
-                     <div class="pjCard col-11 col-md-3 px-3 py-3 mb-3 mx-3 ">
-                        <h4 class="text-center pj_detail">Myanmar Robotian 2019</h4>
-                        <h6 class="text-center pj_detail">Competition Robot</h5>
-                         <hr>
-                         <div class="pjImg">
-                             <img src="/assets/images/wall.png" alt="HTML Documentation" width="100%" height="auto">
-                         </div>
-                         <hr class="text-center">
-                         <div class="pjDetail">
-                            <h5 class="mb-3 pj_title"> Wall Tracking Robot</h5>
-                            <ul class="list-group">
-                                <li class="list-group-item"><i class="fas fa-robot"></i> Arduino</li>
-                                <li class="list-group-item"><i class="fas fa-robot"></i> Sensors</li>
-                              </ul>
-                        </div>
-                     </div>
-                </div>
+                         
+                      </div>
+                   </div>
+                 
               </div>
-           
-       
-
-        </section>
-        <footer>
-            <address class=" fw-bold">Copyright©2022 All Rights Reserved. <br> Aung Si Thu </address>
-        </footer>
-
+            </div>
+            <div id="others_pj" class="d-none">
+              <div  id="others" class="pb-5 pt-1 pt-md-3 pjContainer justify-content-start justify-content-md-center d-flex" >
+                  <div class="pjCard col-11 col-md-3 px-3 py-3 mb-3 mx-3 ">
+                      <h4 class="text-center pj_detail">Myanmar Roboleague 2019</h4>
+                      <h6 class="text-center pj_detail">Competition Robot</h6>
+                       <hr  class="text-center">
+                      <div class="pjImg">
+                          <img src="assets/images/grab.png" alt="HTML Documentation" width="100%" height="auto">
+                      </div>
+                       <hr>
+                      <div class="pjDetail">
+                          <h5 class="mb-3 pj_title"> Grab Robot</h5>
+                          <ul class="list-group">
+                              <li class="list-group-item"><i class="fab fa-uncharted"></i> MBlock Softwate</li>
+                              <li class="list-group-item"><i class="fas fa-robot"></i> Utimate 2.0</li>
+                            </ul>
+                      </div>
+                  </div>
+                  <div class="pjCard col-11 col-md-3 px-3 py-3 mb-3 mx-3 ">
+                      <h4 class="text-center pj_detail">Myanmar Robotian 2019</h4>
+                      <h6 class="text-center pj_detail">Accessement Robot</h5>
+                       <hr>
+                       <div class="pjImg">
+                           <img src="/assets/images/line.png" alt="HTML Documentation" width="100%" height="auto">
+                       </div>
+                       <hr class="text-center">
+                       <div class="pjDetail">
+                          <h5 class="mb-3 pj_title"> Line Tracking Robot</h5>
+                          <ul class="list-group">
+                              <li class="list-group-item "><i class="fas fa-robot"></i> Arduino</li>
+                              <li class="list-group-item"><i class="fas fa-robot"></i> Sensors</li>
+                            </ul>
+                      </div>
+                   </div>
+                   <div class="pjCard col-11 col-md-3 px-3 py-3 mb-3 mx-3 ">
+                      <h4 class="text-center pj_detail">Myanmar Robotian 2019</h4>
+                      <h6 class="text-center pj_detail">Competition Robot</h5>
+                       <hr>
+                       <div class="pjImg">
+                           <img src="/assets/images/wall.png" alt="HTML Documentation" width="100%" height="auto">
+                       </div>
+                       <hr class="text-center">
+                       <div class="pjDetail">
+                          <h5 class="mb-3 pj_title"> Wall Tracking Robot</h5>
+                          <ul class="list-group">
+                              <li class="list-group-item"><i class="fas fa-robot"></i> Arduino</li>
+                              <li class="list-group-item"><i class="fas fa-robot"></i> Sensors</li>
+                            </ul>
+                      </div>
+                   </div>
+              </div>
+            </div>
+         
      
-        <div class="fixed">
-            <a href="#" class="text-decoration-none"><i class="fas fa-chevron-circle-up "></i></a>
-        </div>
+
+      </section>
+      <footer>
+          <address class=" fw-bold">Copyright©2022 All Rights Reserved. <br> Aung Si Thu </address>
+      </footer>
+
+   
+      <div class="fixed">
+          <a href="#" class="text-decoration-none"><i class="fas fa-chevron-circle-up "></i></a>
+      </div>
+  </div>
+  
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/jquery.js"></script>
     <script src="assets/js/app.js"></script>
