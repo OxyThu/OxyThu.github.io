@@ -364,7 +364,7 @@ header{
 
 address{
     margin-bottom: 0 !important;
-    color:white;
+    color: var(--text-secondary_color);
     text-align: center;
     padding: 10px;
 }
@@ -378,7 +378,7 @@ address{
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #111;
+    background-color: var(--side_nav_color);
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -389,7 +389,7 @@ address{
     padding: 15px 15px 15px 15px;
     text-decoration: none;
     font-size: 25px;
-    color: #818181;
+    color: var(--text-secondary_color);
     display: block;
     transition: 0.3s;
   }
@@ -432,8 +432,8 @@ address{
   }
 
   footer{
-    background-color: rgb(51, 53, 54);
-    color : rgb(111, 109, 109);
+    background-color: var(--side_nav_color);
+    color : var(--text-secondary_color);
   }
 
   /* end to top arrow */

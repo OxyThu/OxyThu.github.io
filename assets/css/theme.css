@@ -1,6 +1,7 @@
 body[data-theme="dark"]{
     --background_color : black;
    --background_secondary_color : rgba(61, 60, 60, 0.722);
+   --side_nav_color : rgb(30, 29, 29);
     --text_primary_color : white;
     --text-secondary_color :rgb(145, 181, 212);
 }
@@ -8,6 +9,7 @@ body[data-theme="dark"]{
 body[data-theme="light"]{
     --background_color : white;
     --background_secondary_color : rgba(174, 191, 195, 0.722);
+    --side_nav_color : rgb(174, 191, 195);
     --text_primary_color : black;
     --text-secondary_color :rgb(14, 20, 25);
 }
