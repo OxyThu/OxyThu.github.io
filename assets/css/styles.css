@@ -5,14 +5,17 @@ html{
     scroll-behavior: smooth;
 }
 header{
-    background-color: black;
+    background-color: var(--background_color);
 }
 .navLink{
-    color:rgb(145, 181, 212)!important;
+    color:var(--text-secondary_color)!important;
 }
-.homeSection,.eduSection,.skillSection,.projectSection{
-    background-color: black;
-    color: white;
+#content{
+  background-color: var(--background_color);
+}
+.homeSection,.eduSection,.skillSection,.projectSection, .downArrow{
+    background-color: var(--background_color);
+    color: var(--text_primary_color);
     /* height: 100vh;
     width: 100%; */
 }
@@ -35,7 +38,7 @@ header{
 }
 .word {
   margin: auto;
-  color: white;
+  color: var(--text_primary_color);
   height: 1em;
   font: 700 normal 3em 'tahoma';
   color: rgb(81, 154, 222);
@@ -67,7 +70,7 @@ header{
 /* Education Section */
 
 .edu_title{
-  color: rgb(145, 181, 212);
+  color:var(--text-secondary_color);
   font-weight: 700;
   text-align: center;
 }
@@ -88,11 +91,6 @@ header{
 }
 
 
-.eduContainer{
-  background-color: rgb(9, 2, 37);
-  padding: 10%;
-  border-radius: 100px 100px 30px 30px;
-}
 /* The actual timeline (the vertical ruler) */
 .timeline {
   position: relative;
@@ -153,9 +151,9 @@ header{
   width: 0;
   z-index: 1;
   right: 30px;
-  border: medium solid rgba(61, 60, 60, 0.722);
+  border: medium solid var(--background_secondary_color);
   border-width: 10px 0 10px 10px;
-  border-color: transparent transparent transparent rgba(61, 60, 60, 0.722);
+  border-color: transparent transparent transparent var(--background_secondary_color);
 }
 
 /* Add arrows to the right container (pointing left) */
@@ -167,9 +165,9 @@ header{
   width: 0;
   z-index: 1;
   left: 30px;
-  border: medium solid rgba(61, 60, 60, 0.722);
+  border: medium solid var(--background_secondary_color);
   border-width: 10px 10px 10px 0;
-  border-color: transparent rgba(61, 60, 60, 0.722) transparent transparent;
+  border-color: transparent var(--background_secondary_color) transparent transparent;
 }
 
 /* Fix the circle for containers on the right side */
@@ -180,7 +178,7 @@ header{
 /* The actual content */
 .edu_content {
   padding: 20px 30px;
-  background-color: rgba(61, 60, 60, 0.722);
+  background-color: var(--background_secondary_color);
   position: relative;
   border-radius: 6px;
 }
@@ -213,9 +211,9 @@ header{
 /* Make sure that all arrows are pointing leftwards */
   .edu_container::before {
     left: 60px;
-    border: medium solid rgba(61, 60, 60, 0.722);
+    border: medium solid var(--background_secondary_color);
     border-width: 10px 10px 10px 0;
-    border-color: transparent rgba(61, 60, 60, 0.722) transparent transparent;
+    border-color: transparent var(--background_secondary_color) transparent transparent;
   }
 
 /* Make sure all circles are at the same spot */
@@ -238,21 +236,21 @@ header{
 /* skill section */
 
 .skill_title{
-  color: rgb(145, 181, 212);
+  color: var(--text-secondary_color);
   font-weight: 700;
   align-items: center;
   margin-top: 8px;
 }
 
 .skill_container{
-  background-color: rgba(61, 60, 60, 0.722);
+  background-color: var(--background_secondary_color);
   padding: 15px;
   border-radius: 6px;
   height: inherit!important;
 }
 
 .skill_text{
-  color: rgb(145, 181, 212);
+  color:  var(--text-secondary_color);
   align-items: center;
   margin-top: 5px;
 }
@@ -323,8 +321,8 @@ header{
 
 .selectSkillBtn {
   font-size: 1.2em!important;
-  background-color: rgba(61, 60, 60, 0.718)!important;
-  color: rgb(145, 181, 212)!important;
+  background-color: var(--background_secondary_color)!important;
+  color: var(--text-secondary_color)!important;
 }
 
 
@@ -337,7 +335,7 @@ header{
 }
 
 .pj_title, .pj_detail{
-  color:rgb(145, 181, 212)!important;
+  color: var(--text-secondary_color)!important;
 }
 
 .pj_detail{
@@ -351,7 +349,7 @@ header{
 
 .pjCard{
     border-radius: 33px;
-    background-color: rgba(61, 60, 60, 0.722);
+    background-color: var(--background_secondary_color);
 }
 
 @media screen and (max-width: 450px) {

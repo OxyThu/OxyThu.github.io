@@ -1,16 +1,41 @@
 
-$(document).ready(function(){
  
+
+$(document).ready(function(){
+  let theme = localStorage.getItem("theme");
+  if(theme == 'light'){
+    $("#darkmode-toggle").prop("checked", true);
+    setTheme(theme);
+  }else{
+    localStorage.setItem("theme", "dark");
+    $("body").attr("data-theme", "dark");
+  }
+
     $("#loading").fadeOut("slow");
     $("#content").fadeIn("slow");
-
   $(document).scroll(function(){
     closeNav();
     toTopArrow();
   });
 });
 
+$("#darkmode-toggle").on("click", (e) => {
+   let theme = localStorage.getItem("theme");
+   switch(theme){
+    case "dark" : setTheme("light");
+    $("#darkmode-toggle").prop("checked", true);
+    break;
+    case "light" : setTheme("dark");
+    $("#darkmode-toggle").prop("checked", false);
+    break;
+    default : break;
+   }
+})
 
+function setTheme(theme){
+  localStorage.setItem("theme", theme);
+  $("body").attr("data-theme", theme);
+}
 
 $("#skillChange").change((e) => {
   let type = e.target.value;
@@ -21,6 +46,8 @@ $("#projectChange").change((e) => {
   let type = e.target.value;
   changePj(type);
 })
+
+
 
 
 
